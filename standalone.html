@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2 升 3 家长会录像</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d9e0ea;
+      --paper: #f6f8fb;
+      --surface: #ffffff;
+      --accent: #1769e0;
+      --accent-soft: #e8f1ff;
+      --green: #0f8f72;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .page-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 20px;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .video-pane,
+    .side-pane {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .video-pane {
+      min-width: 0;
+      padding: 24px;
+    }
+
+    .page-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .page-head p,
+    .video-meta,
+    .video-description,
+    .anchor-copy small {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .page-head h1 {
+      margin: 4px 0 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .open-link {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      background: #fbfdff;
+    }
+
+    video {
+      width: 100%;
+      max-height: calc(100vh - 220px);
+      min-height: 360px;
+      background: #0c111d;
+      border-radius: 8px;
+    }
+
+    .video-meta {
+      margin-top: 16px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .video-description {
+      margin-top: 8px;
+      line-height: 1.7;
+    }
+
+    .summary-section {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .summary-section h2,
+    .side-pane h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .summary-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .summary-list p {
+      margin: 0;
+      color: #344054;
+      line-height: 1.75;
+    }
+
+    .anchor-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .anchor-card {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 12px;
+      width: 100%;
+      min-height: 92px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .anchor-card:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .anchor-time {
+      color: var(--accent);
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .anchor-copy {
+      display: grid;
+      gap: 6px;
+    }
+
+    .anchor-copy strong {
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .anchor-copy small {
+      line-height: 1.55;
+    }
+
+    .side-pane {
+      align-self: start;
+      padding: 20px;
+      position: sticky;
+      top: 24px;
+    }
+
+    .side-pane p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .page-shell {
+        grid-template-columns: 1fr;
+        padding: 12px;
+      }
+
+      .video-pane {
+        padding: 16px;
+      }
+
+      .page-head {
+        flex-direction: column;
+      }
+
+      video {
+        min-height: 220px;
+        max-height: none;
+      }
+
+      .anchor-list {
+        grid-template-columns: 1fr;
+      }
+
+      .side-pane {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="video-pane">
+      <header class="page-head">
+        <div>
+          <p>家长会视频</p>
+          <h1>2 升 3 家长会录像</h1>
+        </div>
+        <a class="open-link" href="https://parent-video-vault-gaohan.oss-cn-shanghai.aliyuncs.com/videos/2026-07-09/008a1cfcd26d3368e8efaf9f.mp4" target="_blank" rel="noopener">打开视频</a>
+      </header>
+
+      <video id="videoPlayer" controls playsinline preload="metadata" src="https://parent-video-vault-gaohan.oss-cn-shanghai.aliyuncs.com/videos/2026-07-09/008a1cfcd26d3368e8efaf9f.mp4"></video>
+      <p class="video-meta">2026-07-09</p>
+      <p class="video-description">本次家长会围绕孩子从二年级升入三年级后的学习变化、语文能力培养、整本书阅读、写作训练和作业安排展开。</p>
+
+      <section class="summary-section">
+        <h2>家长速读</h2>
+        <div class="summary-list">
+          <p>三年级会出现明显变化：正式考试和分层开始出现，学习任务变多，孩子也会从“听安排”逐渐进入“会追问、会思考”的阶段。家长需要关注效率、习惯和情绪沟通，而不是简单减少某一门学科。</p>
+          <p>语文学习的重点会升级：课文文体更丰富，阅读材料更长，题目不再只是从原文找答案，而是要求孩子结合文本、生活经验和自己的理解，说清楚依据。</p>
+          <p>答题模板不是核心。模板只能帮助规范表达，真正得分来自孩子是否理解文本、能否抓住关键句和关键词，并把自己的思考清楚写出来。</p>
+          <p>写作会正式进入训练：课程不会直接给范文让孩子照抄，而是通过主题、选材、大纲、事件细节和表达要求，帮助孩子把自己的素材组织成文章。</p>
+          <p>后续课程会以整本书阅读为主线，并和校内单元目标连接。节奏调整为两周一本，阅读量不降低，但更重视目标、理解、批注、书面输出和阶段性反馈。</p>
+          <p>给家长的建议：允许成绩和状态有阶段性起伏，重点观察孩子的时间规划、独立完成任务、阅读理解和书面表达；多做陪伴式引导，少做替代式答案。</p>
+        </div>
+      </section>
+
+      <section class="summary-section">
+        <h2>时间锚点</h2>
+        <div id="anchorList" class="anchor-list"></div>
+      </section>
+    </section>
+
+    <aside class="side-pane">
+      <h2>使用方式</h2>
+      <p>点击下方任意时间锚点，会自动跳到对应片段播放。家长也可以直接从“家长速读”先了解重点，再选择相关片段观看。</p>
+    </aside>
+  </main>
+
+  <script>
+    const anchors = [
+      [0, "开场与本次主题", "说明本次家长会约一小时，重点讲二升三后的变化，以及阅读课程如何兼顾校内要求和阅读本身的兴趣。"],
+      [83, "三年级会遇到哪些变化", "成绩分层、任务变多、时间不够、孩子开始顶嘴或追问原因、考试压力增加，都是常见且正常的阶段变化。"],
+      [292, "家长最该关注的三个关键词", "时间来自效率，学习推进靠思考，长期稳定靠习惯。先提升效率，再处理任务分配。"],
+      [439, "三年级语文课文和文体变化", "课文不再主要是童话和故事，会增加记叙文、散文、说明文、应用文等，对现实生活和社会认知的要求变高。"],
+      [706, "阅读理解题的难度升级", "题目从直接找答案，变成理解幻想、对比、人物品质、作者写法和表达作用，需要孩子给出自己的依据。"],
+      [862, "词语、阅读速度和表达要求", "词语辨析更细，阅读材料变长，孩子需要从“我看懂了”进一步到“我能说清楚、写清楚”。"],
+      [999, "答题模板", "我们在 L3 训练开始去标准答题，但模板只是规范表达，不能替代理解。"],
+      [1098, "写作正式开始", "三年级开始从看图写话过渡到正式写作，需要训练选材、词语匹配、事件组织和现实经验理解。"],
+      [1270, "对三年级变化的小结", "不要因为短期分数起伏过度焦虑，也不要只砍任务；应看过程、看效率、看孩子是否真正掌握方法。"],
+      [1440, "语文学科的位置", "语文不像部分学科那样短期刷题就能明显见效，它需要长期积累阅读、理解和表达能力。"],
+      [1680, "语文能力由什么构成", "核心是基础语素、理解力、技能量和技巧。天赋不是最主要因素，基础和训练才是可持续的。"],
+      [1962, "为什么整本书阅读重要", "整本书能连续训练人物理解、主题情感、前后照应和深层思考，比碎片阅读更适合作为能力训练载体。"],
+      [2180, "阅读节奏和选书调整", "从一周一本调整为两周一本。书更厚、更难，但总阅读量不减少，选书会按阅读目标和校内单元来匹配。"],
+      [2590, "课堂案例：什么是有新鲜感的句子", "不是陌生句子，而是用词准确、有画面感、好词好句能服务表达。课堂会引导孩子找句子、说理由。"],
+      [2850, "课堂结构变化", "第一周增加书面输出练习，第二周复习和细讲。练习重在知道错在哪里，而不是机械多刷。"],
+      [3240, "写作训练怎么做", "不会直接给范文照抄，而是先给主题和选材支架，再引导孩子列大纲、写事件、看范文中的方法。"],
+      [3450, "双月测与阶段反馈", "两个月会进行一次阶段检测，目的不是单纯看分数，而是发现这一阶段哪里没吸收，后续再补。"],
+      [3500, "作业安排调整", "两周一本后，阅读任务会更灵活，加入批注、书面练习、表达任务和自主安排，培养孩子独立性。"],
+      [3747, "结尾给孩子的方向", "目标是读得完整、有策略，练习服务问题，精练服务校内，引导和坚持最终服务扎实成长。"]
+    ];
+
+    const player = document.querySelector("#videoPlayer");
+    const anchorList = document.querySelector("#anchorList");
+
+    function formatTime(totalSeconds) {
+      const seconds = Math.max(0, Number(totalSeconds) || 0);
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const remainder = Math.floor(seconds % 60);
+      const minuteText = hours ? String(minutes).padStart(2, "0") : String(minutes);
+      const secondText = String(remainder).padStart(2, "0");
+      return hours ? `${hours}:${minuteText}:${secondText}` : `${minuteText}:${secondText}`;
+    }
+
+    anchors.forEach(([time, title, text]) => {
+      const button = document.createElement("button");
+      button.className = "anchor-card";
+      button.type = "button";
+      button.innerHTML = `
+        <span class="anchor-time">${formatTime(time)}</span>
+        <span class="anchor-copy">
+          <strong></strong>
+          <small></small>
+        </span>
+      `;
+      button.querySelector("strong").textContent = title;
+      button.querySelector("small").textContent = text;
+      button.addEventListener("click", () => {
+        player.currentTime = time;
+        player.play().catch(() => {});
+        player.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      anchorList.appendChild(button);
+    });
+  </script>
+</body>
+</html>
