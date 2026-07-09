@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>家长会视频</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="video-pane">
+      <header class="page-head">
+        <div>
+          <p>家长会视频</p>
+          <h1 id="videoTitle">视频列表</h1>
+        </div>
+        <a id="openVideoLink" class="open-link" href="#" target="_blank" rel="noopener">打开视频</a>
+      </header>
+
+      <video id="videoPlayer" controls playsinline preload="metadata"></video>
+      <p id="videoMeta" class="video-meta"></p>
+      <p id="videoDescription" class="video-description"></p>
+    </section>
+
+    <aside class="playlist-pane">
+      <div class="playlist-head">
+        <strong>全部视频</strong>
+        <span id="videoCount">0</span>
+      </div>
+      <div id="videoList" class="video-list"></div>
+    </aside>
+  </main>
+
+  <template id="videoCardTemplate">
+    <button class="video-card" type="button">
+      <span data-field="title"></span>
+      <small data-field="meta"></small>
+    </button>
+  </template>
+
+  <script src="videos.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
