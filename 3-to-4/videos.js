@@ -3,7 +3,7 @@ window.PARENT_MEETING_VIDEOS = [
     title: "3 升 4 家长会录像",
     date: "2026-07-16",
     duration: "56:46",
-    url: "https://parent-video-vault-gaohan.oss-cn-shanghai.aliyuncs.com/videos/2026-07-16/3-to-4-parent-meeting-web.mp4",
+    url: "https://parent-video-vault-gaohan.oss-cn-shanghai.aliyuncs.com/videos/2026-07-16/3-to-4-parent-meeting-web.mp4?v=20260716-1405",
     description: "本次家长会围绕孩子从三年级升入四年级后的语文学习变化、阅读文体升级、概括与提问能力、做题习惯和家校配合展开。",
     summary: [
       "四年级语文的变化不是简单“题目更难”，而是阅读文体和思考方式升级：散文、说明文、神话等文本会要求孩子从情节理解，走向表达作用、情感关联、信息筛选和结构概括。",
