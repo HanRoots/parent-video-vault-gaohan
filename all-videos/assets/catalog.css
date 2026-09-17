@@ -198,6 +198,21 @@ main {
   --stage: var(--gold);
 }
 
+.stage-violet {
+  --stage: #67548f;
+}
+
+.wide-item {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
+.wide-item ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-left: 0;
+  list-style-position: inside;
+}
+
 .item-topline,
 .item-footer {
   display: flex;
@@ -324,6 +339,16 @@ footer p {
 
   .video-item {
     min-height: 0;
+  }
+
+  .wide-item {
+    grid-column: auto;
+  }
+
+  .wide-item ul {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    list-style-position: outside;
   }
 }
 
